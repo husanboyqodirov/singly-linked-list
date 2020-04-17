@@ -3,8 +3,8 @@
 #include <stdlib.h>
 
 /*
-	Student: Husanboy Qodirov
-	Class: Data Structure and Algorithm
+    Student: 20182653 Husanboy
+    Class: Data Structure and Algorithm
 */
 
 //defining simple linked list
@@ -27,23 +27,6 @@ linkedList_h* createLinkedList() {
     return L;
 }
 
-//insert as last node
-void insertLastNode(linkedList_h* L, element x) {
-    listNode* newNode = (listNode*)malloc(sizeof(listNode));
-    newNode->data = x;
-    newNode->link = NULL;
-    if (L->head == NULL) {
-        L->head = newNode;
-    }
-    else {
-        listNode* temp = L->head;
-        while (temp->link != NULL) {
-            temp = temp->link;
-        }
-        temp->link = newNode;
-    }
-}
-
 //insert a node in the middle
 void insertNode(linkedList_h* L, listNode* pre, element x) {
     listNode* newNode = (listNode*)malloc(sizeof(listNode));
@@ -59,6 +42,31 @@ void insertNode(linkedList_h* L, listNode* pre, element x) {
     else {
         newNode->link = pre->link;
         pre->link = newNode;
+    }
+}
+
+//insert as first node
+void insertFirstNode(linkedList_h* L, element x) {
+    listNode* newNode = (listNode*)malloc(sizeof(listNode));
+    newNode->data = x;
+    newNode->link = L->head;
+    L->head = newNode;
+}
+
+//insert as last node
+void insertLastNode(linkedList_h* L, element x) {
+    listNode* newNode = (listNode*)malloc(sizeof(listNode));
+    newNode->data = x;
+    newNode->link = NULL;
+    if (L->head == NULL) {
+        L->head = newNode;
+    }
+    else {
+        listNode* temp = L->head;
+        while (temp->link != NULL) {
+            temp = temp->link;
+        }
+        temp->link = newNode;
     }
 }
 
