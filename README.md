@@ -6,6 +6,3 @@
 <b>Demonstrated operations include:</b> <i>Defining simple linked list, Defining head as the structure to indicate the beginning of the 
 list, Empty list generation, Insertion algorithms as the last node and in the middle, Deletion algorithm, Search for nodes with data x in the list, Display function</i><br><br>
 <img src="terminal_screenshot.png" alt="Compiled result on Linux terminal">
-<h3>
-coded and compiled by Husanboy Qodirov in C language
-</h3>
