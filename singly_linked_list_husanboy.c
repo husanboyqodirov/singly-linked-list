@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /*
-    Student: Husanboy Qodirov
+    Student: Husanboy
     Class: Data Structure and Algorithm
 */
 
